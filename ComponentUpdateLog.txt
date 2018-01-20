@@ -1,0 +1,14 @@
+Last Modified Date & Time: 06/26/2017 19:12:37
+
+CY8CKIT_046_USB_Audio: CY8CKIT_046_USB_Audio.cydwr
+	cy_boot [v5.30] to [v5.60]
+	cy_lfclk [v1.0] to [v1.20]
+	LIN_Dynamic [v3.30] to [v4.0]
+
+CY8CKIT_046_USB_Audio: TopDesign.cysch
+	CapSense [v2.40] to [v2.60]
+	CodecI2CM [v3.10] to [v3.20]
+	UART [v3.10] to [v3.20]
+	USBFS [v3.0] to [v3.10]
+
+
