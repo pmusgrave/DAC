@@ -3801,12 +3801,12 @@
         <Data key="sourceClk_plus_acuracy_name" value="0.25" />
         <Data key="src_clk_id" value="" />
         <Data key="src_clk_name" value="" />
-        <Data key="start_on_reset" value="True" />
+        <Data key="start_on_reset" value="False" />
         <Data key="trim_with" value="USB" />
       </Group>
       <Group key="AE29FF0C-09F4-4f1f-90F6-BE0C5AFEF171">
         <Data key="accuracy_display_unit" value="1" />
-        <Data key="c_load" value="12" />
+        <Data key="c_load" value="22" />
         <Data key="check_tolerance" value="False" />
         <Data key="derive_type" value="BUILTIN" />
         <Data key="desired_freq" value="17.2032" />
@@ -3952,7 +3952,7 @@
         <Data key="sourceClk_plus_acuracy_name" value="0.25" />
         <Data key="src_clk_id" value="5A84F528-323D-4eda-8141-58D504D70A4B" />
         <Data key="src_clk_name" value="SYSCLK" />
-        <Data key="start_on_reset" value="True" />
+        <Data key="start_on_reset" value="False" />
       </Group>
       <Group key="F19A89AE-D2B5-4d11-9670-CE5139C8F272">
         <Data key="check_tolerance" value="False" />

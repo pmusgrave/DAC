@@ -69,12 +69,17 @@
 *******************************************************************************/
 uint8 Codec_Init(void)
 {
+    //PDN_Write(0);
+    //CyDelay(10);
+    //PDN_Write(1);
+    //CSN_Write(0);
+            
 	uint8 ret;
 	
 	ret = Codec_ResetOverI2C();
 	CyDelay(CODEC_RESET_WAIT_DELAY);
 	
-	ret = Codec_SendData(CODEC_REG_INTERFACE_SET, 0b10000101);
+	ret = Codec_SendData(CODEC_REG_INTERFACE_SET, 0b10000111);
 	
 	return ret;  
 }

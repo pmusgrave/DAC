@@ -61,6 +61,8 @@ int main()
 	/* Setup the Application part of the firmware */
     InitApp();
 	
+    Codec_Init();
+    
     for(;;)
     {
         /* Check for USB enumeration with USB host */
