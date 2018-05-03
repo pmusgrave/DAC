@@ -98,10 +98,7 @@ int main()
             /* Do a software reset once data is sent over UART */
 			CySoftwareReset();		
 		}
-        
-		/* Clear audio IN buffer when IN stream is stopped */
-		HandleAudioInBuffer();             
-        
+               
 		/* Runs application layer code for CapSense */
 		RunApplication(); 
     }

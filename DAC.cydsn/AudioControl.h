@@ -83,7 +83,7 @@
 	extern uint8 audioClkConfigured;
 	
 	void InitAudioPath(void);
-	void ProcessAudioIn(void);
+	//void ProcessAudioIn(void);
 	void SetClockRate(uint8 newRate);
 	void Stop_I2S_Rx(void);	
 	void Stop_I2S_Tx(void);	

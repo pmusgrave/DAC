@@ -38,7 +38,7 @@
 *******************************************************************************/
 #include <Application.h>
 #include <AudioControl.h>
-#include <AudioIn.h>
+//#include <AudioIn.h>
 #include <AudioOut.h>
 #include <Config.h>
 #include <USBInterface.h>
@@ -130,7 +130,6 @@ void ServiceUSB(void)
 			
 			/* Set 24-bit mode for I2S */
 			/* Clear internal pointers */			
-			Stop_I2S_Rx();			  
 			Stop_I2S_Tx();
 			
 			/* Stop component */
@@ -171,7 +170,7 @@ void ServiceUSB(void)
     	{            
             altSetting[AUDIO_IN_INTERFACE_INDEX] = USBFS_GetInterfaceSetting(2);           
 		
-			Stop_I2S_Rx();			
+			// Stop_I2S_Rx();			
 			
             ByteCounter_Rx_WritePeriod((IN_TRANS_SIZE) - 1);
             

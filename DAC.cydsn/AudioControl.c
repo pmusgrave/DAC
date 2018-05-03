@@ -39,7 +39,7 @@
 #include <Application.h>
 #include <AudioControl.h>
 #include <AudioOut.h>
-#include <AudioIn.h>
+//#include <AudioIn.h>
 #include <Codec.h>
 #include <Config.h>
 #include <project.h>
@@ -82,14 +82,10 @@ void InitAudioPath(void)
 	/* Enable DMA */
 	CyDmaEnable();
 	
-	InitializeAudioInPath();
 	InitializeAudioOutPath();
 
 	/* Set TX FIFO trigger to 2 bytes (half-empty) to increase timing margin */
-    I2S_TX_AUX_CONTROL_REG = I2S_TX_AUX_CONTROL_REG | FIFO_HALF_EMPTY_MASK;
-    
-    /* Set RX FIFO trigger to 2 bytes (half-empty) to increase timing margin */
-    I2S_RX_AUX_CONTROL_REG = I2S_RX_AUX_CONTROL_REG | FIFO_HALF_EMPTY_MASK;
+    I2S_TX_AUX_CONTROL_REG = I2S_TX_AUX_CONTROL_REG | FIFO_HALF_EMPTY_MASK;    
 }
 
 
@@ -111,9 +107,7 @@ void InitAudioPath(void)
 void SetClockRate(uint8 newRate) 
 {
 	/* Stop I2S before changing PLL clock */
-	Stop_I2S_Tx();    
-    Stop_I2S_Rx();
-    
+	Stop_I2S_Tx();      
 	  
 	/* Configure Codec and Audio clock */
 	//Codec_Deactivate();
@@ -169,7 +163,7 @@ void HandleSamplingFrequencyChangeRequest(void)
      
     if((USBFS_TRANS_STATE_IDLE == USBFS_transferState) && USBFS_frequencyChanged)
     {		
-        if(((!inPlaying) && (!outPlaying)) && ((AUDIO_OUT_ENDPOINT == USBFS_frequencyChanged)		
+        if(((!outPlaying)) && ((AUDIO_OUT_ENDPOINT == USBFS_frequencyChanged)		
              || (AUDIO_IN_ENDPOINT == USBFS_frequencyChanged)))
         {
             uint32 newFrequency;

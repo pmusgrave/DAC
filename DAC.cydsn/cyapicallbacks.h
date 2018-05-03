@@ -39,7 +39,6 @@
 #ifndef CYAPICALLBACKS_H
 #define CYAPICALLBACKS_H
     extern void ProcessAudioOut(void);
-    extern void ProcessAudioIn(void);
     extern void processAsyncFeedbackTransfer(unsigned long clearFlag);
     extern void UpdateFeedbackCount(void);
 	
@@ -49,7 +48,7 @@
 	#define USBFS_EP_1_ISR_EntryCallback()	ProcessAudioOut()
 	
 	#define USBFS_EP_2_ISR_ENTRY_CALLBACK	
-	#define USBFS_EP_2_ISR_EntryCallback()	ProcessAudioIn()
+	// #define USBFS_EP_2_ISR_EntryCallback()	ProcessAudioIn()
 	
 	#define USBFS_EP_3_ISR_ENTRY_CALLBACK
 	#define USBFS_EP_3_ISR_EntryCallback()	processAsyncFeedbackTransfer(1)
